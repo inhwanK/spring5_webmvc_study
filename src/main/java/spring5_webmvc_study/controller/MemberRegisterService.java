@@ -3,7 +3,9 @@ package spring5_webmvc_study.controller;
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MemberRegisterService {
 	@Autowired
 	private MemberDao memberDao;

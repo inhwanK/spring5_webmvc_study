@@ -42,4 +42,10 @@ public class RegisterRequest {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return String.format("RegisterRequest [email=%s, password=%s, confirmPassword=%s, name=%s]", email, password,
+				confirmPassword, name);
+	}
+
 }
