@@ -1,4 +1,4 @@
-package spring5_webmvc_study.spring;
+package spring5_webmvc_study.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,4 +1,4 @@
-package spring5_webmvc_study.spring;
+package spring5_webmvc_study.controller;
 
 public class RegisterRequest {
 	private String email;

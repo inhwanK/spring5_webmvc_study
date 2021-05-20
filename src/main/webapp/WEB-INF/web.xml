@@ -16,16 +16,16 @@
         <init-param>
             <param-name>contextClass</param-name>
             <param-value>
-            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
-        </param-value>
+	            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+	        </param-value>
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-            spring5_webmvc_study.config.MvcConfig
-            spring5_webmvc_study.config.ControllerConfig
-            spring5_webmvc_study.config.MemberConfig
-        </param-value>
+	            spring5_webmvc_study.config.MvcConfig
+	            spring5_webmvc_study.config.ControllerConfig
+	            spring5_webmvc_study.config.MemberConfig
+	        </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
