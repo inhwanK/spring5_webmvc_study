@@ -27,6 +27,4 @@ public class AnsweredData {
 		return String.format("AnsweredData [responses=%s, res=%s]", responses, res);
 	}
     
-    
-
 }
