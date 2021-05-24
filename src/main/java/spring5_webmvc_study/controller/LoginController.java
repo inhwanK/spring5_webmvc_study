@@ -1,5 +1,7 @@
 package spring5_webmvc_study.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -19,13 +21,13 @@ public class LoginController {
     }
 
     @PostMapping
-    public String submit(LoginCommand loginCommand, Errors errors) {
+    public String submit(LoginCommand loginCommand, Errors errors, HttpSession session) {
         new LoginCommandValidator().validate(loginCommand, errors);
         if (errors.hasErrors())
             return "/login/loginForm";
         try {
             AuthInfo authInfo = authService.authenicate(loginCommand.getEmail(), loginCommand.getPassword());
-            //TODO 세션에 authInfo 저장해야함
+            session.setAttribute("authInfo", authInfo);
             return "/login/loginSuccess";
         }catch (WrongIdPasswordException ex) {
             errors.reject("idPasswordNotMatching");
