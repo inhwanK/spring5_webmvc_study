@@ -62,6 +62,10 @@ public class Member {
 		this.registerDateTime = registerDateTime;
 	}
 
+	public boolean matchPassword(String password) {
+        return this.password.equals(password);
+    }
+
 	@Override
 	public String toString() {
 		return String.format("Member [id=%s, email=%s, password=%s, name=%s, registerDateTime=%s]", id, email, password,

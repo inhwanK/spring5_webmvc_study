@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'war'
 }
 
 sourceCompatibility= 1.8 //컴파일할 때 적용할 java code의 jdkversion 지정
