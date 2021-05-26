@@ -1,6 +1,5 @@
 package spring5_webmvc_study.controller;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
