@@ -1,9 +1,7 @@
 package spring5_webmvc_study.controller;
 
-import org.springframework.beans.TypeMismatchException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,8 +18,8 @@ public class MemberDetailController {
 	}
 
 	@GetMapping("/members/{id}")
-	public ModelAndView detail(@PathVariable("id") Long memId/*,Model model*/) {
-		Member member = memberDao.selectById(memId);
+	public ModelAndView detail(@PathVariable("id") Long id) {
+		Member member = memberDao.selectById(id);
 		if (member == null) {
 			throw new MemberNotFoundException();
 		}
